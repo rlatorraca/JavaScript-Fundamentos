@@ -5,44 +5,51 @@ const minhaListaDeTarefas = [
     'limpar o quarto'
 ]
 
-// console.log(minhaListaDeTarefas[0])
-// console.log(minhaListaDeTarefas[1])
-// console.log(minhaListaDeTarefas[4])
+/* Uma posicao que nao existe na lista / vetor / matrix sera UNDEFINED */
 
-// quantidade de itens no array
+console.log(minhaListaDeTarefas[0])
+console.log(minhaListaDeTarefas[1])
+console.log(minhaListaDeTarefas[4])
+
+// <> Quantidade de itens no array
 // console.log(minhaListaDeTarefas.length)
 
-// adicionar item - PUSH
+// <> adicionar item - PUSH
 minhaListaDeTarefas.push('formatar computador')
 // console.log(minhaListaDeTarefas);
 
-// remover ultimo da lista - POP
+// <> Remover ultimo da lista - POP
 // const ultimo = minhaListaDeTarefas.pop()
 // console.log(ultimo, minhaListaDeTarefas)
 
-// remover o primeiro da lista - SHIFT
+// <> Remover o primeiro da lista - SHIFT
 // const primeiro = minhaListaDeTarefas.shift()
 // console.log(primeiro, minhaListaDeTarefas)
 
-// remover um item especifico a partir de um indice
+// <> Remover um item especifico a partir de um INDICE
 // console.log(minhaListaDeTarefas[2])
 
-// qual item de inicio
+// <> Qual item de inicio
 // quantos remover
-// 2 => BASE (inicia dele)
-// 1 => apenas 1 eleemento
+// 2 : é INDICE BASE (inicia dele)
+// 1 : quantidade de elementos (no caso apenas 1 elemento)
 // minhaListaDeTarefas.splice(2, 1)
 // console.log(minhaListaDeTarefas);
 
+// <> List com varios tipos diferentes
+// Um ARRAY eh um OBJECT
 const itens = [
     1, 'computador', 0.22
 ]
 
 // verificar o tipo do array
 console.log(typeof(itens))
+console.log(typeof(minhaListaDeTarefas))
 
 // verificar se é array da forma correta
+// Como é um OBJECT temos saber se é um ARRAY
 console.log(Array.isArray(itens))
+console.log(Array.isArray(minhaListaDeTarefas))
 
 // ordenar
 const numeros = [ 'c', 'z', 'a', 'd']
@@ -54,7 +61,8 @@ console.log(numeros.sort())
 // console.log(novo)
 
 // juntar arrays em uma string
-// console.log(itens.join(','))
+console.log(itens.join(','))
+console.log(itens.join('-|-'))
 
 // verificar indice do item
 const index = itens.indexOf('computador')
