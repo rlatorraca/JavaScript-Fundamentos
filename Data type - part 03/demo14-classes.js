@@ -33,10 +33,14 @@ heroi2.atacar()
 
 class Heroi3 {
     static obterAnoNascimento(idade) {
-        return 2020 -idade 
+        const date = new Date()
+        const yearBirthday = date.getFullYear() - idade
+        return `${idade} anos, nasceu no ano ${yearBirthday}`
+            
+
     } 
 }
-const anoNascimento = Heroi3.obterAnoNascimento(19)
+const anoNascimento = Heroi3.obterAnoNascimento(456)
 console.log(
-    `O ano de nascimento do Heroi é ${anoNascimento}`
+    `O ano de nascimento do Heroi para um pessoa com ${anoNascimento}`
 )
