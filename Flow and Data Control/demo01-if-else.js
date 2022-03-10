@@ -8,7 +8,6 @@ console.log('args', args);
 console.log(saldo);
 if (isNaN(saldo)) {
   console.log("valor invalido!");
-  return;
 }
 // 2 - null
 // repare o let

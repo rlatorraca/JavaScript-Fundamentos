@@ -1,5 +1,8 @@
 
+// require para pegar um classe existente no node (no caso readline, que le a entrada do prompt)
 const readLine = require('readline')
+
+// Inicializando o terminal
 const terminal = readLine.createInterface({
     // modo de entrada será via terminal
     input: process.stdin,
