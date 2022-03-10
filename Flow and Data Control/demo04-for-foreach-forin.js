@@ -1,5 +1,5 @@
-const textoPar = "par"
-const textoImpar = "impar"
+const textoPar = "even number (par)"
+const textoImpar = "odd number (impar)"
 // imprimir se é par ou impar até o 10
 // nao precisa criar variavel externa
 for(let index =0; index <= 10; index++) {
@@ -8,16 +8,22 @@ for(let index =0; index <= 10; index++) {
 }
 
 //
+let randomNumber = Math.random() 
 const minhaListaDeTarefas = [
     {
-        id: parseInt(Math.random() * 10),
+        id: parseInt( randomNumber * 10),
         nome: 'Zezinho',
         superPoder:'Veloz'
     },
     {
-        id: Math.random(),
+        id: randomNumber * 10,
         nome: "Mariazinha",
         superPoder: "Super força"
+    },
+    {
+        id: randomNumber * 100,
+        nome: "Zé roela",
+        superPoder: "Super torque"
     }
 ]
 
@@ -34,8 +40,9 @@ for(const index in minhaListaDeTarefas) {
     const item = minhaListaDeTarefas[index]
     console.log(`Nome`, item.nome)
 }
-
+console.log('')
 // nao precisa criar o item
 for(const item of minhaListaDeTarefas) {
+ 
     console.log('Nome item', item.nome)
 }
