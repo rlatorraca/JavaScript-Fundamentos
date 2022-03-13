@@ -11,7 +11,14 @@ const terminal = readfile.createInterface({
 //     })
 // })
 
+// RESOLVE e REJECT sao usados para mostra que a execucao terminou
+    // RESOLVE => terminou com SUCESSO (e vai para bloco de codigo de RESOLVE)
+    //   - then() 
+    // REJECT => terminou com ERRO (e vai para bloco de codigo de REEJCT)
+    //   - catch() 
+
 function questionAsync(texto) {
+
     return new Promise((resolve, reject) => {
         terminal.question(`${texto}\n`, resolve)
     })
@@ -41,4 +48,6 @@ Promise.resolve()
     .catch(error => {
         console.log('Deu ruim****', error.stack)
     })
+
+    // Independente do then() e catch(), sera executaedo
     .finally(() => terminal.close())

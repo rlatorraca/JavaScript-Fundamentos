@@ -1,4 +1,7 @@
+// Importa o File System module do node que tem o nome de 'fs'
+// File System serve para manipular arquivos  e tambem usar funcoes existentes no Sistema Operacional
 const fs = require('fs')
+
 // fs.readFile('./arq1.txt', (error, resposta)  => {
 //     if(error) {
 //         console.log('error!!', error)
@@ -11,6 +14,7 @@ const fs = require('fs')
 
 // fs.readFile => le arquivos
 // Padrao do CALLBACK function(error, result)
+// O RESULT no JS sera um buffer (que pode repartido e pode ser usado quando queremos trabalhar sob demanda)
 fs.readFile('./arq1.txt', (errorArq1, respostaArq1) => {
     if (errorArq1) {
         console.log('error1!!', errorArq1)
