@@ -27,4 +27,6 @@ async function main() {
     }
 }
 
+
+// deve ser chamanada a funcao async
 main()
