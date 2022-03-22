@@ -32,6 +32,12 @@ class JogoDaMemoria {
         this.tela.atualizarImagens(heroisOcultos)
         this.heroisEscondidos = heroisOcultos
     }
+
+    exibirHerois(nomeHeroi) {
+        const { img } = this.heroisIniciais.find(({ nome }) => nomeHeroi === nome) 
+        this.tela.exibirHerois(nomeHeroi, img)
+    }
+
     verificarSelecao(id, nome) {
         const item = { id, nome}
         // alert(`Olá: ${nome}, id: ${id}`)
@@ -47,10 +53,11 @@ class JogoDaMemoria {
                 let deveMostrarMensagem = false
                 if(opcao1.nome === item.nome && opcao1.id !== id) {
                     deveMostrarMensagem = true 
-                    alert('Cards are matching!')
-                    return;
+                    this.exibirHerois(item.nome)
+                    this.tela.exibirMensagem(true)
+                return;
                 }
-                alert('Ops... Cards NOT matching!')
+                this.tela.exibirMensagem(false)
                 break;
         }
     }
