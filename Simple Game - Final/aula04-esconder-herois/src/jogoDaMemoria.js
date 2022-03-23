@@ -46,7 +46,7 @@ class JogoDaMemoria {
         this.tela.atualizarImagens(copias)
         setTimeout(() => {
             this.esconderHerois(copias)
-        }, 1000);
+        }, 2500);
     }
 
     jogar() {
