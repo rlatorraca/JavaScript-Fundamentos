@@ -28,10 +28,12 @@ class Tela {
         </div> 
         `
     }
+
     static alterarConteudoHTML(codigoHtml) {
         const conteudo = document.getElementById(ID_CONTEUDO)
         conteudo.innerHTML = codigoHtml
     }
+    
     static gerarStringHTMLPelaImagem(data) {
         return data.map(Tela.obterCodigoHtml).join('')
     }
@@ -65,18 +67,22 @@ class Tela {
         }
         carregando.classList.add(CLASSE_INVISIVEL)
     }
+
     static atualizarImagens(itens) {
         const codigoHtml = Tela.gerarStringHTMLPelaImagem(itens)
         Tela.alterarConteudoHTML(codigoHtml)
     }
+
     static exibirHerois(nome, img) {
         const elements = document.getElementsByName(nome)
         elements.forEach(item => (item.src = img))
     }
+
     static configurarBotaoJogar(funcaoOnclick) {
         const btnJogar = document.getElementById(ID_BOTAO_JOGAR)
         btnJogar.onclick = funcaoOnclick
     }
+
     static configurarClickVerificarSelecao(funcaoOnclick) {
         window.verificarSelecao = funcaoOnclick
     }
